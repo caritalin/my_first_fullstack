@@ -1,8 +1,9 @@
 "use strict";
+const API_URL = 'http://localhost:5555';
 
 const deleteCity = async (id) => {
   try {
-    const response = await fetch('http://localhost:5000/api/cities/' + id,{
+    const response = await fetch(API_URL + '/api/cities/' + id,{
       method: 'DELETE'
     });
 
@@ -56,7 +57,7 @@ const populateTable = (data) => {
 
 const fetchCities = async () => {
   try {
-    const response = await fetch('http://localhost:5000/api/cities');
+    const response = await fetch(API_URL + '/api/cities');
     const data = await response.json();
     populateTable(data);
   } catch (error) {
@@ -66,7 +67,7 @@ const fetchCities = async () => {
 
 const addCity = async (city) => {
   try {
-    const response = await fetch('http://localhost:5000/api/cities',{
+    const response = await fetch(API_URL + '/api/cities',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
