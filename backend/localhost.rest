@@ -24,4 +24,8 @@ Content-Type: application/json
 }
 
 ### 
-DELETE http://localhost:5000/api/cities/2 HTTP/1.1
+DELETE http://localhost:5000/api/cities/3 HTTP/1.1
+
+###
+
+GET http://localhost:5000/db/tasks

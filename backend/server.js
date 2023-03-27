@@ -1,11 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 
+const citiesRouter = require('./cities');
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 const PORT = 5000;
+
+app.use('/api/cities', citiesRouter);
 
 const CITIES = [
   {

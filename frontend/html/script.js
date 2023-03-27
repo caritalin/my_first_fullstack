@@ -1,5 +1,5 @@
 "use strict";
-const API_URL = 'http://localhost:5555';
+const API_URL = 'http://localhost:5000';
 
 const deleteCity = async (id) => {
   try {
